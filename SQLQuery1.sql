@@ -4,7 +4,7 @@ USE sirket
 CREATE TABLE Isci(
 VezifeId int PRIMARY KEY identity ,
 MKOD nvarchar(255) ,
-SAA nvarchar(25) ,
+SAA nvarchar(25) , 
 Maas float,
 );
 
@@ -28,6 +28,7 @@ MehsulId int ,
 isciId int,
 tetbiqolunanendirim int,
 satistarixi datetime,
+
 )
 select * from Isci
 select * from Vezife
@@ -42,4 +43,39 @@ INSERT INTO Isci
 values('sirket3','eli',700)
 INSERT INTO Isci
 values('sirket4','Veli',300)
+INSERT INTO Vezife
+values('muellim')
+INSERT INTO Vezife
+values('mudur')
+INSERT INTO Vezife
+values('ceo')
+INSERT INTO Mehsul
+values('notebook',60,80)
+INSERT INTO Mehsul
+values('defter',70,90)
+INSERT INTO Satis
+values(1,1,3,2013-01-01)
+INSERT INTO Satis
+values(2,3,3,2020-01-01)
+INSERT INTO Filial
+values('qarayev')
+INSERT INTO Filial
+values('elmler')
+INSERT INTO Filial
+values('nerimanov')
+INSERT INTO Filial
+values('genclik')
+INSERT INTO Filial
+values('28 may')
+SELECT COUNT(SAA) 
+AS IsciSay FROM Isci
+
+SELECT * FROM Isci
+ORDER BY MAAS DESC
+
+SELECT * FROM Mehsul
+ORDER BY alisqiymeti DESC
+
+SELECT * FROM Satis
+ORDER BY satistarixi
  
